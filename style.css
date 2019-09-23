@@ -1,0 +1,162 @@
+body {
+    background: #fff;
+    font-family: "Lato", "Open Sans", "Oswald";
+    margin: 0;
+}
+
+h1 {
+    font-family: "Lato";
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0 5px 0;
+}
+
+h2 {
+    font-family: "Oswald";
+    font-size: 2em;
+    font-weight: 300;
+    text-align: left;
+    text-transform: uppercase;
+    padding: 0 0 0 10px;
+    margin: 0 0 0 0;
+}
+
+section {
+    padding: 10px;
+}
+
+/*
+
+Main Section
+
+*/
+
+#main {
+    font-family: "Open Sans";
+    /* background-color: #333; */
+    padding: 10px;
+    /* margin: 10px; */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "hvorfor"
+    "hvad"
+    "hvor"
+    "hvem"
+    "citat";
+}
+
+/*
+
+Section Hvorfor
+
+*/
+
+#s-hvorfor {
+    grid-area: hvorfor;
+    background-color: yellow;
+}
+
+#s-hvorfor li:nth-child(4) {
+    padding: 0 0 0 20px;
+    list-style-type: none;
+    
+}
+
+/*
+
+Section hvad
+
+*/
+
+#s-hvad {
+    grid-area: hvad;
+    background-color: #ccc;
+}
+
+/*
+
+Section Hvor
+
+*/
+
+#s-hvor {
+    grid-area: hvor;
+    background: #eee;
+}
+
+#s-hvor li:nth-child(2) {
+    padding: 0 0 0 20px;
+    list-style-type: none;
+}
+
+#s-hvor li:nth-child(2), .sectionHvor li:nth-child(4), .sectionHvor li:nth-child(5) {
+    padding: 0 0 0 20px;
+    list-style-type: none;
+}
+
+/* 
+
+section hvem
+
+*/
+
+#s-hvem {
+    grid-area: hvem;
+    background: red;
+}
+
+/* 
+
+section citat
+
+*/
+
+#citat {
+    text-align: center;
+    grid-area: citat;
+    background: blue;
+}
+
+#citat p:first-child {
+    color: #fff;s
+}
+
+#citat p:nth-child(2) {
+    font-style: italic;
+}
+
+#citat p:nth-child(3) {
+    text-align: right;
+}
+
+@media screen and (min-width: 400px) {
+    h1 {
+        font-size: 2.5em;
+    }
+    
+    #main {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "hvorfor hvorfor"
+        "hvad hvor"
+        "hvem hvem"
+        "citat citat";
+    }
+}
+
+@media screen and (min-width: 700px) {
+    h1 {
+        font-size: 3.5em;
+    }
+    
+    #main {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+        "hvorfor hvorfor hvorfor"
+        "hvad hvor hvem"
+        "citat citat citat";
+    }
+}
