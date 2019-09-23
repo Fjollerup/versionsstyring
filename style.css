@@ -1,0 +1,13 @@
+body {
+    background: #fff;
+    font-family: "Lato", "Open Sans", "Oswald";
+    line-height: 20px;
+}
+
+h1 {
+    font-family: "Lato";
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
