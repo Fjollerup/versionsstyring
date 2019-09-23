@@ -6,11 +6,11 @@ body {
 
 h1 {
     font-family: "Lato";
-    font-size: 3.5em;
+    font-size: 1.5em;
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
-
+    margin: 10px 0 5px 0;
 }
 
 h2 {
@@ -23,6 +23,10 @@ h2 {
     margin: 0 0 0 0;
 }
 
+section {
+    padding: 10px;
+}
+
 /*
 
 Main Section
@@ -30,10 +34,11 @@ Main Section
 */
 
 #main {
-    display: grid;
     font-family: "Open Sans";
     /* background-color: #333; */
     padding: 10px;
+    /* margin: 10px; */
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: 
     "hvorfor"
@@ -41,7 +46,6 @@ Main Section
     "hvor"
     "hvem"
     "citat";
-
 }
 
 /*
@@ -126,4 +130,33 @@ section citat
 
 #citat p:nth-child(3) {
     text-align: right;
+}
+
+@media screen and (min-width: 400px) {
+    h1 {
+        font-size: 2.5em;
+    }
+    
+    #main {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "hvorfor hvorfor"
+        "hvad hvor"
+        "hvem hvem"
+        "citat citat";
+    }
+}
+
+@media screen and (min-width: 700px) {
+    h1 {
+        font-size: 3.5em;
+    }
+    
+    #main {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+        "hvorfor hvorfor hvorfor"
+        "hvad hvor hvem"
+        "citat citat citat";
+    }
 }
